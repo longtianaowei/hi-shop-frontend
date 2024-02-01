@@ -38,11 +38,13 @@
 			...mapMutations('m_user',['updateAddress']),
 			async chooseAddress() {
 				const [err,succ] = await uni.chooseAddress().catch(err => err)
-				
+					console.log(err)
+					console.log(succ);
 				// 用户成功的选择了收货地址
-				if(succ && succ.errMsg === 'chooseAddress:ok') {
+				if(err === null && succ.errMsg === 'chooseAddress:ok') {
 					// this.address = succ
 					// 调用store中提供的方法将address保存到Store里面
+					console.log(succ);
 					this.updateAddress(succ)
 				}
 				

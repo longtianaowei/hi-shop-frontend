@@ -42,10 +42,14 @@
     },
     "quickapp" : {},
     "mp-weixin" : {
+		"requiredPrivateInfos": [
+		      "chooseAddress"
+		],
         "appid" : "wx0929b534a42ccee3",
         "setting" : {
-            "urlCheck" : true,
+            "urlCheck" : false,
             "checkSiteMap" : false
-        }
+        },
+		"libVersion": "latest"
     }
 }
